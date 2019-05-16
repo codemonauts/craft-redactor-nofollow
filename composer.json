@@ -1,0 +1,43 @@
+{
+  "name": "codemonauts/craft-redactor-nofollow",
+  "description": "Craft CMS plugin to extends the Redactor's link module with the nofollow relationship attribute.",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "redactor",
+    "nofollow"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "codemonauts",
+      "homepage": "https://codemonauts.com"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/codemonauts/craft-redactor-nofollow",
+    "docs": "https://github.com/codemonauts/craft-redactor-nofollow/blob/master/README.md",
+    "issues": "https://github.com/codemonauts/craft-redactor-nofollow/issues"
+  },
+  "require": {
+    "craftcms/cms": "^3.0.0",
+    "craftcms/redactor": "^2.1.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "codemonauts\\nofollow\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "nofollow",
+    "class": "codemonauts\\nofollow\\Nofollow",
+    "name": "Redactor nofollow link plugin",
+    "description": "Extends the Redactor's link module with the nofollow relationship attribute.",
+    "hasCpSection": false,
+    "hasSettings": false
+  }
+}
