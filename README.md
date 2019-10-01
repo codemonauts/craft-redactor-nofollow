@@ -33,4 +33,17 @@ Add the new plugin to your Redactor config file:
 }
 ```
 
+The ```nofollow``` will be stripped in all Redactor fields by the HTMLPurifier, which is enabled by default. Instead of disabling the hole HTMLPurifier for a field, you should create your own JSON config file in the directory ```config/htmlpurifier``` and add the following content:
+
+```json
+{
+  "Attr.AllowedFrameTargets": ["_blank"],
+  "Attr.EnableID": true,
+  "HTML.AllowedComments": ["pagebreak"],
+  "Attr.AllowedRel": ["nofollow"]
+}
+```
+
+The ```"Attr.AllowedRel": ["nofollow"]``` is for this plugin, the first three lines are Craft's default configuration, because your config file overrides Craft's defaults. After creating your config file, you have to activate this in every  Redactor field in the advanced section.
+
 With ❤ by [codemonauts](https://codemonauts.com)
