@@ -15,7 +15,11 @@
 
     $R['classes']['link.component'].prototype._get_nofollow = function()
     {
-        return (this.attr('rel')) ? this.attr('rel') : false;
+        if (this.attr('rel')) {
+            return /nofollow/i.test(this.attr('rel'));
+        }
+
+        return false;
     };
 
     $R['classes']['link.component'].prototype._set_nofollow = function(nofollow)

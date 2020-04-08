@@ -1,7 +1,7 @@
 {
   "name": "codemonauts/craft-redactor-nofollow",
   "description": "Craft CMS plugin to extends the Redactor's link module with the nofollow relationship attribute.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "craft-plugin",
   "keywords": [
     "craft",
