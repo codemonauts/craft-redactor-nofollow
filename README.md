@@ -37,9 +37,6 @@ The ```nofollow``` will be stripped in all Redactor fields by the HTMLPurifier, 
 
 ```json
 {
-  "Attr.AllowedFrameTargets": ["_blank"],
-  "Attr.EnableID": true,
-  "HTML.AllowedComments": ["pagebreak"],
   "Attr.AllowedRel": ["nofollow"]
 }
 ```
