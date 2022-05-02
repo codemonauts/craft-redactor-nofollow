@@ -1,4 +1,4 @@
-# Redactor nofollow link plugin for Craft CMS 3.x
+# Redactor nofollow link plugin for Craft CMS
 
 ![Icon](resources/nofollow.png)
 
@@ -10,8 +10,8 @@ For a lot of sites it is important to set links to ```rel="nofollow"```. Redacto
 
 ## Requirements
 
- * Craft CMS >= 3.0.0
- * Craft Redactor Plugin >= 2.1.0
+ * Craft CMS >= 4.0.0
+ * Craft Redactor Plugin >= 3.0.0
 
 ## Installation
 
@@ -33,7 +33,7 @@ Add the new plugin to your Redactor config file:
 }
 ```
 
-The ```nofollow``` will be stripped in all Redactor fields by the HTMLPurifier, which is enabled by default. Instead of disabling the hole HTMLPurifier for a field, you should create your own JSON config file in the directory ```config/htmlpurifier``` and add the following content:
+The ```nofollow``` will be stripped in all Redactor fields by the HTMLPurifier, which is enabled by default. Instead of disabling the hole HTMLPurifier for a field, you should add the following line to the ```config/htmlpurifier/Default.json```:
 
 ```json
 {
@@ -43,7 +43,5 @@ The ```nofollow``` will be stripped in all Redactor fields by the HTMLPurifier, 
   "Attr.AllowedRel": ["nofollow"]
 }
 ```
-
-The ```"Attr.AllowedRel": ["nofollow"]``` is for this plugin, the first three lines are Craft's default configuration, because your config file overrides Craft's defaults. After creating your config file, you have to activate this in every  Redactor field in the advanced section.
 
 With ❤ by [codemonauts](https://codemonauts.com)
