@@ -92,7 +92,7 @@
             text: linkData.text,
             title: linkData.title,
             target: (this.opts.linkTarget || linkData.target),
-            nofollow: linkData.nofollow
+            nofollow: linkData.url === null ? this.opts.linkDefaultNoFollow : linkData.nofollow
         };
 
         if (!this.opts.linkNewTab) $modal.find('.form-item-target').hide();
