@@ -2,6 +2,10 @@
 
 ## 2.1.0 - 2022-12-14
 
+### Added
+
+- Redactor config parameter `linkDefaultNoFollow`. Allows to set whether the checkbox in the link dialog should be checked by default when adding a new link.
+
 ### Fixed
 
 - Preventing other Redactor plugins from registering.
