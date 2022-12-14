@@ -22,8 +22,6 @@ class Nofollow extends Plugin
             Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, function(RegisterPluginPathsEvent $event) {
                 $event->paths[] = __DIR__.'/resources/';
             });
-
-            Field::registerRedactorPlugin('nofollow');
         }
     }
 }
